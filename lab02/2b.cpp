@@ -33,7 +33,10 @@ int main (){
         cin >> a;
         cout << endl << "Podaj b: ";
         cin >> b;
-        cout << "Suma: " << a+b ;
+        cout << "Suma: " << a+b << endl;
+        cout << "Różnica: " << a-b <<endl;
+        cout << "Iloczyn: " <<  a*b <<endl;
+        cout << "Iloraz: " << a/b <<endl;
 
          }
     else{ if (wybor == 2) {
@@ -42,6 +45,10 @@ int main (){
         cin >> a;
         cout << endl << "Podaj b: ";
         cin >> b;
+        cout << "Suma: " << a+b << endl;
+        cout << "Różnica: " << a-b <<endl;
+        cout << "Iloczyn: " <<  a*b <<endl;
+        cout << "Iloraz: " << a/b <<endl;
             }
         else {cout<<endl<<"Niepoprawny wybor"<<endl; }}
 
