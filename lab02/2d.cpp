@@ -20,16 +20,23 @@ int main () {
     cout << "Wybór: ";
     cin >> wybor;
 
+    int zero = -273;
+    
     float temp;
     if (wybor == 1) {
-        cout << "Podaj temperature: "
+        cout << "Podaj temperature: ";
         cin>>temp;
-        cout << endl << temp << " st. Celsjusza to " <<(temp * 9 / 5)+32 << " st. Fahrenheita"
+        if(temp >= -273.15) 
+        cout << endl << temp << " st. Celsjusza to " <<(temp * 9 / 5)+32 << " st. Fahrenheita";
+        else cout<<"Zbyt zimno na liczenie!" ;
     }
-    else if (wybor == 2 {
-        cout << "Podaj temperature: "
+    else if (wybor == 2) {
+        cout << "Podaj temperature: ";
         cin>>temp;
-        cout << endl << temp << " st. Fahrenheita to " << (temp - 32) * 5/9 << " st Celsjusza"
+        int t = ((temp - 32) * 5/9);
+        if(t > -273.15)
+        cout << endl << temp << " st. Fahrenheita to " << (temp - 32) * 5/9 << " st Celsjusza";
+        else cout<<"Zbyt zimno na liczenie!" ;
     }
 
     return 0;
