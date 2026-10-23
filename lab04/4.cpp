@@ -20,7 +20,10 @@ int main(){
         cout << endl << i;
     }
 
-    cout << endl << ""
+    cout << endl << "odliczanie co drugi od 0: " << endl;
+    for ( int i=0; i <= liczba ; i+=2){
+        cout << endl << i;
+    }
 
     return 0;
 }
