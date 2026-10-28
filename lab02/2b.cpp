@@ -1,17 +1,3 @@
-//Napisz program, który wczytuje dwie liczby w wybranej precyzji a następnie oblicza i 
-//wypisuje wyniki działań (suma, różnica, iloczyn i iloraz) z dokładnością do 12 miejsca po 
-//przecinku.
-//Wybierz precyzję:
-//[1] pojedyncza precyzja
-//[2] podwójna precyzja
-//Wybór: 1
-//Podaj a: 1
-//Podaj b: 3
-//Suma: 4.000000000000
-//Różnica: -2.000000000000
-//Iloczyn: 3.000000000000
-//Iloraz: 0.333333343267
-
 #include <iostream>
 #include <iomanip>
 
@@ -50,7 +36,7 @@ int main (){
         cout << "Iloczyn: " <<  a*b <<endl;
         cout << "Iloraz: " << a/b <<endl;
             }
-        else {cout<<endl<<"Niepoprawny wybor"<<endl; }}
+        else {cout<<"Niepoprawny wybór"<<endl; }}
 
 
     
