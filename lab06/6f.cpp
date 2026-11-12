@@ -10,9 +10,10 @@
 
 using namespace std;
 
-int systemx(int liczba, int a){
+void systemx(int liczba, int a){
 
     int pomoc=0, i=1;
+    if(a<10){
     while (liczba > 0){
 
         pomoc = pomoc + (liczba%a)*i;
@@ -20,14 +21,25 @@ int systemx(int liczba, int a){
         i=i*10;
 
     }
+    cout << pomoc;}
+    else if (a==16){
+
+        hellnahhhh
+    }
 }
 
 int main(){
 
     int n;
+    cout << "N: ";
     cin >> n;
 
-    cout << systemx(n, 2);
+    cout << "Binarnie: "; systemx(n, 2);
+    cout << endl << "Piątkowo: "; systemx(n, 5);
+    cout << endl << "Siódemkowo: "; systemx(n, 7);
+    cout << endl << "Ósemkowo: "; systemx(n, 8);
+    cout << endl << "Szesnastkowo: "; systemx(n, 16;)
+
 
 
     return 0;
