@@ -12,13 +12,14 @@ int main()
 
     cin.getline(tekst, MAX_SIZE);
 
-
-    for (int i = 0; tekst[i] != '\0'; ) {
+    cout<<endl;
+    for (int i = 0; tekst[i] != '\0';i++ ) {
         unsigned char c = (unsigned char)tekst[i];
 
-        if (c < 128) {
+        if (c < 128 ) {
             // ASCII
-            // tak jak się uczyliśmy do tej pory (1 bajt)
+            
+            c=c+32; cout <<c;
         }
         else {
             // gdyby interesujowało nas tylko: ł (C5 82) Ł (C5 81) - dopisać resztę znaków polskich...
@@ -26,7 +27,7 @@ int main()
             if ((unsigned char)tekst[i] == 0xC5 && (unsigned char)tekst[i + 1] == 0x82) {
                 // tu odpowiednio podmień na kod literki, którą chcemy uzyskać
             }
-        }
+        }}
     
     return 0;
 }
