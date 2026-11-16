@@ -21,22 +21,31 @@ bool czy_msc_zerowe (double a, double b, double wsp[], int n){
     double pomoc1, pomoc2;
     pomoc1 = wartosc_wielomianu(a, wsp, n);
     pomoc2 = wartosc_wielomianu(b, wsp, n);
-    if((pomoc1*pomoc2)<=0) return 0;
-    else if ((pomoc1*pomoc2)>0) return 1;
+    if((pomoc1*pomoc2)<=0) {return 1;}
+    else if ((pomoc1*pomoc2)>0) {return 0;}
 
 }
 
-//double bisekcja (double a, double b, double wsp[], int n){
+double bisekcja (double a, double b, double wsp[], int n){
+
+    double polowa=(a+b)/2;
+
+    if(fabs(wartosc_wielomianu(polowa, wsp, n))<EPS || fabs((a-b))<EPS) {
+        a=polowa;
+        return a;
+    }
+    else if(czy_msc_zerowe(a,polowa, wsp, n)) { return bisekcja(a, polowa, wsp, n);}
+    else if(czy_msc_zerowe(polowa, b, wsp, n)) { return bisekcja(polowa, b, wsp, n);}
 
 
-//}
+}
 
 int main(){
 
     double wsp[MAX_N];
 
-    double a, b, n, ws;
-
+    double a, b, ws;
+    int n;
     cout << "a: ";
     cin >> a;
     cout << endl <<"b: ";
@@ -53,20 +62,13 @@ int main(){
     // pomoc2 = wartosc_wielomianu(b, wsp, n);
 
     //cout << endl << "wartosc: " << wartosc_wielomianu(2, wsp, n);
-
+    double wynik=0;
     if(czy_msc_zerowe(a, b, wsp, n)){
-
-
-        cout << "kjhfdhjufh";
-
-
-
-
-
-
-
-
+       wynik = bisekcja(a, b, wsp, n);
     }
+
+    cout << endl << wynik << endl;
+
 
     return 0;
 }
