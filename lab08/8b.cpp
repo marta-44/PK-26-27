@@ -3,7 +3,7 @@
 //losowymi z zakresu od 1 do podanego zakresu włącznie. Ziarno ustawiane jest funkcją srand(), 
 //a liczby losowane są przy pomocy rand() % zakres + 1.
 #include <iostream>
-#include <cstdlib>
+#include <cstdlib>h
 
 using namespace std;
 
